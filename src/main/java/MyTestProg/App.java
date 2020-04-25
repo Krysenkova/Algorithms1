@@ -26,7 +26,7 @@ public class App {
 
 
             do {
-                option = Console.readIntFromStdin("Please enter the number of an option");
+                option = Console.readIntFromStdin("Please enter the number of an option: ");
                 if (option > 0 && option <= 5)
                     commands.get(option - 1).execute();
                 else if (option == 0)
@@ -35,7 +35,7 @@ public class App {
                     System.out.println("Wrong input! Try again!");
                 }
             } while (option < 0 || option > 6);
-        } while (option != 0);
+        } while (true);
     }
 }
 

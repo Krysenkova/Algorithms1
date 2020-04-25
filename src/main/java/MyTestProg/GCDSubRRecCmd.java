@@ -17,7 +17,7 @@ public class GCDSubRRecCmd implements ICommand {
         System.out.println("Recursive Euclid's algorithm subtraction");
         int a = Console.readIntFromStdin("Enter number for x: ");
         int b = Console.readIntFromStdin("Enter number for y: ");
-        System.out.printf("%n x = " + a + ", y = " + b + "%n");
+        System.out.printf("%nx = " + a + ", y = " + b + "%n");
         System.out.println("Result: " + EuclidSubtractionRecursive(a, b));
         System.out.println();
     }

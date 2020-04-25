@@ -11,7 +11,7 @@ public class SiebEratosthenes implements ICommand {
                     prime[i] = false;
             }
         }
-        System.out.print("Prime numbers: ");
+        System.out.printf("Prime numbers: ");
         for (int i = 2; i <= a; i++) {
             if (prime[i])
                 System.out.print(i + " ");
@@ -25,9 +25,11 @@ public class SiebEratosthenes implements ICommand {
         if (a < 2) {
             System.out.println("Choose number from 2");
             execute();
+        } else {
+            SieveEratosthenes(a);
+            System.out.println();
+            System.out.println();
         }
-        SieveEratosthenes(a);
-        System.out.println();
     }
 
     @Override

@@ -1,11 +1,11 @@
 package MyTestProg;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Console {
 
-    public static int readIntFromStdin(String text) throws InputMismatchException{
+    public static int readIntFromStdin(String text) {
+
         Scanner scanner = new Scanner(System.in);
         int number;
         System.out.println(text);

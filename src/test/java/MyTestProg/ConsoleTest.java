@@ -6,16 +6,24 @@ package MyTestProg;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.util.InputMismatchException;
 
 
 public class ConsoleTest {
 
+   public void provideInput(String data) {
+        ByteArrayInputStream in = new ByteArrayInputStream(data.getBytes());
+        System.setIn(in);
+    }
 
 
     @Test
-    public void readIntFromStdin_test_good() {
-
+    public void test_readIntFromStdin(){
+        String expectedRes = "55";
+        provideInput(expectedRes);
+        int res = Console.readIntFromStdin("Number:");
+        Assert.assertEquals(Integer.parseInt(expectedRes), res);
     }
 
 
